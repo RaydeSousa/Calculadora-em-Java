@@ -4,39 +4,51 @@ public class App {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
-        Calc calc = new Calc();
+
+        int x, y;
+
+        String op;
+
+        int result;
 
         byte exit = 0;
 
         while (exit < 1) {
+
+                      
             System.out.println("valor 1:");
-            calc.x = scanner.nextInt();
+            x = scanner.nextInt();
 
             System.out.println("Escolha uma operação: +, -, *, /");
             System.out.println("Ou digite [sair] para encerrar a calculadora");
             scanner.nextLine();
-            calc.op = scanner.nextLine();
+            op = scanner.nextLine();
 
             System.out.println("valor 2:");
-            calc.y = scanner.nextInt();
+            y = scanner.nextInt();
 
-            switch (calc.op) {
+            switch (op) {
                 case "+":
-                    System.out.println(calc.x + calc.y);
+                    result = (x + y);
+                    System.out.println(result);
                     break;
                 case "-":
-                    System.out.println(calc.x - calc.y);
+                    result = (x - y);
+                    System.out.println(result);
                     break;
                 case "*":
-                    System.out.println(calc.x * calc.y);
+                    result = (x * y);
+                    System.out.println(result);
                     break;
                 case "/":
-                    System.out.println(calc.x / calc.y);
+                    result = (x / y);
+                    System.out.println(result);
                     break;
                 case "sair":
                     exit = 1;
 
             }
+
         }
 
     }
